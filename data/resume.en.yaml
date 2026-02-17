@@ -1,0 +1,115 @@
+# English translations - structural data is in common.yaml
+basics:
+  label: Back-end Developer | Java & Rust | APIs & Systems
+  summary: >
+    Systems Analysis and Development student (4th semester - Estácio)
+    focused on backend development, automation, and software architecture.
+    Author of open-source projects including Rust CLI tools, REST API integrations,
+    and systems with data persistence.
+
+    Professional experience in e-commerce environments performing web application
+    maintenance, production bug fixes, payment system integration, and technical
+    process documentation. Interest in distributed systems and scalable software
+    engineering.
+
+work:
+  - position: Shipping Assistant / Technical Support
+    summary: Shipping & Support Department
+    highlights:
+      - Internal technical support for hardware and software
+      - Ticket registration and follow-up
+      - Creation and maintenance of technical process documentation
+      - ERP system usage for inventory control and shipping
+      - Training of new employees
+      - Invoice issuance
+    location: Brazil
+
+  - position: Technical Support & Web Operations
+    summary: Customer Service Department
+    highlights:
+      - Bug fixing and maintenance in production e-commerce environment
+      - Integration and configuration of payment APIs for online stores
+      - Analysis and resolution of technical issues reducing operational rework
+      - Technical support for web systems serving 30+ merchant clients
+      - Technical documentation of processes and system integrations
+    location: Brazil
+
+projects:
+  - name: omarchy-tmux
+    description: Native integration between Omarchy Linux and tmux-powerkit with support for 40+ themes, persistent per-theme profiles, and automatic reload on theme change.
+    highlights:
+      - Persistent profile architecture per theme (v2.1)
+      - Supports 40+ themes and 60+ variants via tmux-powerkit
+      - Hook system for automatic tmux reload on theme switch
+    keywords:
+      - Shell Script
+      - Bash
+      - tmux
+      - Linux
+    url: https://github.com/joaofelipegalvao/omarchy-tmux
+    roles:
+      - Author
+
+  - name: todo-cli
+    description: CLI task manager written in Rust with JSON persistence, priority system, tags, due dates, and recurring tasks.
+    highlights:
+      - Professional CLI with Clap, auto-generated help and shell completions
+      - Recurring tasks (daily, weekly, monthly) with intelligent deduplication
+      - XDG-compliant storage across Linux, macOS, and Windows
+    keywords:
+      - Rust
+      - CLI
+      - JSON
+    url: https://github.com/joaofelipegalvao/todo-cli
+    roles:
+      - Author
+
+  - name: challange-conversor-moeda
+    description: Currency converter with real-time exchange rates via ExchangeRate API, conversion history, and JSON export. Built as an Oracle ONE + Alura challenge project.
+    highlights:
+      - REST API integration (ExchangeRate) for real-time rates
+      - Conversion history with JSON file export
+      - Supports 6 currency pairs (BRL, USD, EUR, GBP, JPY, ARS)
+    keywords:
+      - Java
+      - REST API
+      - Gson
+    url: https://github.com/joaofelipegalvao/challange-conversor-moeda
+    roles:
+      - Author
+
+  - name: screenmatch-java
+    description: Java OOP learning project modeling movies and series with OMDb API integration and JSON persistence. Developed during Alura course.
+    highlights:
+      - Applied all 4 OOP pillars (encapsulation, inheritance, abstraction, polymorphism)
+      - External API integration (OMDb) via Java HttpClient
+      - JSON serialization/deserialization with Gson library
+    keywords:
+      - Java
+      - OOP
+      - REST API
+    url: https://github.com/joaofelipegalvao/screenmatch-java
+    roles:
+      - Author
+
+education:
+  - area: Systems Analysis and Development
+    studyType: Undergraduate (4th Semester)
+
+skills:
+  - name: Programming Languages
+    level: Basic to Intermediate
+  - name: Databases
+    level: Basic to Intermediate
+  - name: Tools & Platforms
+    level: Intermediate
+  - name: Methodologies
+    level: Basic
+
+languages:
+  - language: Portuguese
+    fluency: Native speaker
+  - language: English
+    fluency: Intermediate (B1)
+  - language: Spanish
+    fluency: Intermediate (B1)

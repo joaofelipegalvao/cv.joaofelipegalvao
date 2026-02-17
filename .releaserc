@@ -1,0 +1,48 @@
+
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    ["@semantic-release/github", {
+      "successComment": false,
+      "failComment": false,
+      "assets": [
+        {
+          "path": "joao-felipe-galvao-resume-complete.zip",
+          "label": "Complete Resume Package (All Formats)"
+        },
+        {
+          "path": "release-assets/joao-felipe-galvao-resume-full-en.pdf",
+          "label": "Resume Full Version (English)"
+        },
+        {
+          "path": "release-assets/joao-felipe-galvao-resume-onepage-en.pdf",
+          "label": "Resume One Page (English)"
+        },
+        {
+          "path": "release-assets/joao-felipe-galvao-resume-full-pt.pdf",
+          "label": "Currículo Versão Completa (Português)"
+        },
+        {
+          "path": "release-assets/joao-felipe-galvao-resume-onepage-pt.pdf",
+          "label": "Currículo Uma Página (Português)"
+        },
+        {
+          "path": "release-assets/resume-data-en.json",
+          "label": "Resume Data (JSON - English)"
+        },
+        {
+          "path": "release-assets/resume-data-pt.json",
+          "label": "Dados do Currículo (JSON - Português)"
+        }
+      ]
+    }]
+  ]
+}

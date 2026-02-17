@@ -1,0 +1,104 @@
+$schema: https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json
+basics:
+  name: "João Felipe Galvão"
+  image: "photo.jpg"
+  email: "joaofelipe.galvao021@gmail.com"
+  phone: "+55 (21) 97722-7580"
+  url: "#"
+  location:
+    city: Silva Jardim
+    countryCode: BR
+    region: Rio de Janeiro
+  profiles:
+    - network: "GitHub"
+      username: "joaofelipegalvao"
+      url: "https://github.com/joaofelipegalvao"
+    - network: "LinkedIn"
+      username: "joaofelipegalvao"
+      url: "https://www.linkedin.com/in/joaofelipegalvao"
+
+# Certifications - all data is common (names, dates, issuers, URLs)
+certificates:
+  - name: Oracle Next Education (ONE) — Alura + Oracle
+    date: 2025-12
+    issuer: Alura e Oracle
+    url: "#"
+  - name: Java Cloud Native
+    date: 2025-05
+    issuer: Bradesco
+    url: "#"
+  - name: Front-end Development
+    date: 2024-08
+    issuer: Gustavo Guanabara
+    url: "#"
+  - name: Database Fundamentals
+    date: 2024-02
+    issuer: Ada Tech
+    url: "#"
+  - name: Automation with N8N
+    date: 2026-02
+    issuer: Santander Bootcamp
+    url: "#"
+
+work:
+  - name: DC Importação
+    url: "#"
+    startDate: 2019-05
+    endDate: 2022-12
+  - name: Trinus
+    url: "#"
+    startDate: 2023-01
+    endDate: 2024-12
+
+education:
+  - institution: Estácio
+    startDate: "2023"
+    endDate: "2026"
+
+skills:
+  - keywords:
+      - Java (OOP, REST API, Spring Boot)
+      - JavaScript (Node.js, automation)
+      - Rust (CLI Tools, systems programming)
+      - Shell Script (Bash, Linux automation)
+      - HTML & CSS (Front-end)
+      - YAML & JSON (Configuration)
+  - keywords:
+      - PostgreSQL (relational, advanced queries)
+      - MySQL (relational)
+      - MongoDB (NoSQL, documents)
+  - keywords:
+      - Git & GitHub (version control, open source)
+      - N8N (workflow automation)
+      - Trello & Jira (agile project management)
+  - keywords:
+      - Scrum
+      - Kanban
+      - Agile Development
+
+projects:
+  - url: https://github.com/joaofelipegalvao/omarchy-tmux
+    keywords:
+      - Shell Script
+      - Bash
+      - tmux
+      - Linux
+      - Open Source
+  - url: https://github.com/joaofelipegalvao/todo-cli
+    keywords:
+      - Rust
+      - CLI
+      - JSON
+      - Open Source
+  - url: https://github.com/joaofelipegalvao/challange-conversor-moeda
+    keywords:
+      - Java
+      - REST API
+      - Gson
+      - Oracle ONE
+  - url: https://github.com/joaofelipegalvao/screenmatch-java
+    keywords:
+      - Java
+      - OOP
+      - REST API
+      - Alura

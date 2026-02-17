@@ -1,0 +1,115 @@
+# Tradução em Português - dados estruturais estão em common.yaml
+basics:
+  label: Desenvolvedor Back-end | Java & Rust | APIs e Sistemas
+  summary: >
+    Estudante de Análise e Desenvolvimento de Sistemas (4º semestre - Estácio)
+    com foco em desenvolvimento backend, automação e arquitetura de software.
+    Autor de projetos open-source incluindo CLI tools em Rust, integrações de
+    APIs REST e sistemas com persistência de dados.
+
+    Experiência profissional em ambientes de e-commerce realizando manutenção
+    de aplicações web, correção de bugs em produção, integração de sistemas de
+    pagamento e documentação técnica de processos. Interesse em sistemas
+    distribuídos e engenharia de software escalável.
+
+work:
+  - position: Auxiliar de Expedição / Suporte Técnico
+    summary: Departamento de Expedição e Suporte
+    highlights:
+      - Suporte técnico interno em hardware e software
+      - Registro e acompanhamento de chamados técnicos
+      - Criação e manutenção de documentação técnica de processos internos
+      - Uso de sistema ERP para controle de estoque e expedição
+      - Treinamento de novos colaboradores
+      - Emissão de notas fiscais
+    location: Brasil
+
+  - position: Suporte Técnico & Operações Web
+    summary: Departamento de Atendimento ao Cliente
+    highlights:
+      - Manutenção e correção de bugs em ambiente de produção de e-commerce
+      - Integração e configuração de APIs de pagamento para lojas virtuais
+      - Análise e resolução de problemas técnicos reduzindo retrabalho operacional
+      - Suporte técnico a sistemas web para +30 clientes lojistas
+      - Documentação técnica de processos e integrações de sistemas
+    location: Brasil
+
+projects:
+  - name: omarchy-tmux
+    description: Integração nativa entre Omarchy Linux e tmux-powerkit com suporte a 40+ temas, perfis persistentes por tema e troca automática ao mudar o tema do sistema.
+    highlights:
+      - Arquitetura baseada em perfis persistentes por tema (v2.1)
+      - Suporte a 40+ temas e 60+ variantes via tmux-powerkit
+      - Sistema de hooks para recarga automática do tmux
+    keywords:
+      - Shell Script
+      - Bash
+      - tmux
+      - Linux
+    url: https://github.com/joaofelipegalvao/omarchy-tmux
+    roles:
+      - Autor
+
+  - name: todo-cli
+    description: Gerenciador de tarefas CLI desenvolvido em Rust com persistência JSON, sistema de prioridades, tags, datas de vencimento e tarefas recorrentes.
+    highlights:
+      - CLI profissional com Clap, completions e help automático
+      - Tarefas recorrentes (diária, semanal, mensal) com deduplicação inteligente
+      - Armazenamento compatível com XDG (Linux/macOS/Windows)
+    keywords:
+      - Rust
+      - CLI
+      - JSON
+    url: https://github.com/joaofelipegalvao/todo-cli
+    roles:
+      - Autor
+
+  - name: challange-conversor-moeda
+    description: Conversor de moedas com taxas em tempo real via API ExchangeRate, histórico de conversões e exportação para JSON. Desenvolvido como desafio do programa Oracle ONE + Alura.
+    highlights:
+      - Integração com API REST externa (ExchangeRate)
+      - Histórico de conversões com exportação para arquivo JSON
+      - Suporte a 6 pares de moedas (BRL, USD, EUR, GBP, JPY, ARS)
+    keywords:
+      - Java
+      - API REST
+      - Gson
+    url: https://github.com/joaofelipegalvao/challange-conversor-moeda
+    roles:
+      - Autor
+
+  - name: screenmatch-java
+    description: Projeto de aprendizado de POO em Java com modelagem de filmes e séries, integração com API OMDb e persistência de dados em JSON. Desenvolvido no curso Alura.
+    highlights:
+      - Aplicação dos 4 pilares da POO (encapsulamento, herança, abstração, polimorfismo)
+      - Integração com API externa (OMDb) via HttpClient
+      - Serialização/deserialização com biblioteca Gson
+    keywords:
+      - Java
+      - POO
+      - API REST
+    url: https://github.com/joaofelipegalvao/screenmatch-java
+    roles:
+      - Autor
+
+education:
+  - area: Análise e Desenvolvimento de Sistemas
+    studyType: Graduação (4º Semestre)
+
+skills:
+  - name: Linguagens de Programação
+    level: Básico ao Intermediário
+  - name: Bancos de Dados
+    level: Básico ao Intermediário
+  - name: Ferramentas & Plataformas
+    level: Intermediário
+  - name: Metodologias
+    level: Básico
+
+languages:
+  - language: Português
+    fluency: Falante nativo
+  - language: Inglês
+    fluency: Intermediário (B1)
+  - language: Espanhol
+    fluency: Intermediário (B1)
