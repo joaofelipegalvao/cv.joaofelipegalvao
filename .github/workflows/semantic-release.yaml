@@ -68,7 +68,7 @@ jobs:
             <title>Redirecting...</title>
           </head>
           <body>
-            <p>Redirecting to <a href="/ptbr/">Portuguese version</a>...</p>
+            <p>Redirecting to <a href="/cv.joaofelipegalvao/ptbr/">Portuguese version</a>...</p>
           </body>
           </html>
           EOF
