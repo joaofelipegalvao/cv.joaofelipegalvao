@@ -88,6 +88,9 @@ _inject-html lang:
     favicon_links = '<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" type="image/x-icon" href="../favicon.ico"><link rel="apple-touch-icon" href="../apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest">'
     
     nerdfont_cdn = '<style>@font-face{font-family:"Symbols Nerd Font";src:url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@v3.3.0/patched-fonts/NerdFontsSymbolsOnly/SymbolsNerdFontMono-Regular.ttf") format("truetype");font-weight:normal;font-style:normal;font-display:swap;}.nf{font-family:"Symbols Nerd Font",monospace;}</style>'
+
+    # Mono font used only as identity accent (prompt, badges, dates, small labels) — never for body copy.
+    mono_font_link = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">'
     
     tailwind_script = '<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={darkMode:"class"}</script>'
     
@@ -99,12 +102,13 @@ _inject-html lang:
         'ptbr': '<meta name="description" content="Desenvolvedor Back-end com foco em Java (Spring Boot) e Rust. Experiência em APIs REST, ferramentas CLI e integração de sistemas."><meta name="keywords" content="Desenvolvedor Back-end, Java, Spring Boot, Rust, APIs REST, CLI, Desenvolvimento de Software"><meta name="author" content="João Felipe Galvão"><meta property="og:type" content="profile"><meta property="og:title" content="João Felipe Galvão - Desenvolvedor Back-end"><meta property="og:description" content="Desenvolvedor Back-end | Java & Rust | APIs e Sistemas"><meta name="twitter:card" content="summary">'
     }
     
-    body_classes = 'max-w-4xl mx-auto p-8 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300'
+    body_classes = 'max-w-4xl mx-auto p-8 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 font-sans antialiased transition-colors duration-300'
     
     head_inject = ''.join([
         favicon_links,
         seo_meta.get(lang, ''),
         nerdfont_cdn,
+        mono_font_link,
         tailwind_script,
         theme_script,
         '<style>' + css + '</style>',

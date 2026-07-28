@@ -3,46 +3,58 @@
 // Components are in the components/ directory
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// COLOR PALETTE - Vibrante Theme
+// COLOR PALETTE - Terminal-Premium Theme (neutral zinc + restrained indigo accent)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-// Primary colors - Vibrante e Colorido
-#let color-primary = rgb("#8b5cf6")       // Violet 500 - main brand (roxo vibrante)
-#let color-secondary = rgb("#ec4899")     // Pink 500 - secondary (rosa vibrante)
-#let color-accent = rgb("#a855f7")        // Violet 400 - accent (violeta mais claro)
-#let color-gradient-start = rgb("#8b5cf6") // Violet para gradientes
-#let color-gradient-end = rgb("#ec4899")   // Pink para gradientes
+// Accent - Indigo, used sparingly (links, active icon, badges, dividers)
+#let color-primary = rgb("#4f46e5")       // Indigo 600 - main accent
+#let color-secondary = rgb("#3730a3")     // Indigo 800 - accent hover/emphasis
+#let color-accent = rgb("#4f46e5")        // Indigo 600 - alias kept for compatibility
+#let color-accent-soft = rgb("#eef2ff")   // Indigo 50 - soft badge/pill background
 #let color-k8s = rgb("#326ce5")           // Kubernetes blue - ONLY for K8s certifications
 
-// Text colors - Clear hierarchy with warm slate
-#let color-text = rgb("#1e293b")          // Slate 800 - body text
-#let color-text-bold = rgb("#0f172a")     // Slate 900 - headings
-#let color-muted = rgb("#64748b")         // Slate 500 - secondary text
-#let color-subtle = rgb("#94a3b8")        // Slate 400 - tertiary/hints
+// Text colors - Neutral zinc scale
+#let color-text = rgb("#27272a")          // Zinc 800 - body text
+#let color-text-bold = rgb("#18181b")     // Zinc 900 - headings
+#let color-muted = rgb("#52525b")         // Zinc 600 - secondary text
+#let color-subtle = rgb("#a1a1aa")        // Zinc 400 - tertiary/hints
 
-// Background colors - Mostly neutral with subtle violet hint
-#let color-bg-light = rgb("#fafafa")      // Nearly white - clean background
-#let color-bg-card = rgb("#f9fafb")       // Gray 50 - subtle card background
+// Background colors - Neutral, print-safe (white stays dominant)
+#let color-bg-light = rgb("#fafafa")      // Zinc 50 - panel/card background
+#let color-bg-card = rgb("#fafafa")       // Zinc 50 - subtle card background
 #let color-bg-column = rgb("#fafafa")     // Column background - onepage
 #let color-bg-white = white
 #let color-k8s-bg = rgb("#eff6ff")        // Blue 50 - K8s highlight (keep blue here)
 
-// Header colors (onepage) - Violet but not too intense
-#let color-header-bg = rgb("#7c3aed")     // Violet 600 - header background vibrante
+// Header colors (onepage) - Solid indigo, no gradient
+#let color-header-bg = rgb("#4338ca")     // Indigo 700 - header background
 #let color-header-text = white            // Pure white - header text
-#let color-header-accent = rgb("#f9a8d4") // Pink 300 - header accent (contraste)
+#let color-header-accent = rgb("#c7d2fe") // Indigo 200 - header accent (contrast)
 
-// Border colors - Neutral with subtle violet
-#let color-divider = rgb("#e5e7eb")       // Gray 200 - light border
-#let color-divider-strong = rgb("#d1d5db") // Gray 300 - stronger border
+// Border colors - Neutral zinc
+#let color-divider = rgb("#e4e4e7")       // Zinc 200 - light border
+#let color-divider-strong = rgb("#d4d4d8") // Zinc 300 - stronger border
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPOGRAPHY - Font Families
 // ═══════════════════════════════════════════════════════════════════════════════
 
+// Sans is used for all body copy, headings and labels — legibility first.
 #let font-primary = ("Liberation Sans", "DejaVu Sans", "Noto Sans")
 #let font-sans = ("Liberation Sans", "DejaVu Sans", "Noto Sans")
+// Mono is identity-only: prompts, date badges, small terminal-flavored tags.
+#let font-mono = ("Liberation Mono", "DejaVu Sans Mono", "Noto Sans Mono")
 #let font-icons = ("Symbols Nerd Font",)
+
+// Helper to render mono "chrome" text (prompts, tiny labels, date badges)
+#let mono-text(content, size: 8.5pt, color: none, weight: "regular") = {
+  text(font: font-mono, size: size, fill: if color != none { color } else { color-muted }, weight: weight)[#content]
+}
+
+// Terminal prompt line, e.g. `joao@backend:~` — a single identity cue, not a window.
+#let prompt-line(user: "joao", host: "backend", path: "~", size: 9pt) = {
+  mono-text(size: size, color: color-subtle)[#user#text(fill: color-primary)[@]#host#text(fill: color-subtle)[:]#path#text(fill: color-primary, weight: "bold")[_]]
+}
 
 // Helper function to render Nerd Font icons
 #let nf-icon(icon, size: 1em, color: none) = {
@@ -55,7 +67,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // Full template sizes
-#let size-name-full = 24pt
+#let size-name-full = 28pt
 #let size-label-full = 12pt
 #let size-section-full = 11pt
 #let size-section-icon-full = 14pt
@@ -82,10 +94,10 @@
 // SPACING
 // ═══════════════════════════════════════════════════════════════════════════════
 
-// Full template spacing
-#let spacing-section-full = 1.5em
-#let spacing-block-full = 1.2em
-#let spacing-line-full = 0.8em
+// Full template spacing (more air between elements — premium, less cramped)
+#let spacing-section-full = 2em
+#let spacing-block-full = 1.5em
+#let spacing-line-full = 0.9em
 
 // Onepage template spacing (compact but readable)
 #let spacing-section-onepage = 0.4em
@@ -97,9 +109,9 @@
 // BORDERS & RADIUS
 // ═══════════════════════════════════════════════════════════════════════════════
 
-#let radius-small = 2pt
-#let radius-medium = 3pt
-#let radius-large = 4pt
+#let radius-small = 4pt
+#let radius-medium = 6pt
+#let radius-large = 9pt
 
 #let stroke-thin = 0.3pt
 #let stroke-normal = 0.5pt
@@ -117,13 +129,13 @@
 // INSETS & PADDINGS
 // ═══════════════════════════════════════════════════════════════════════════════
 
-#let inset-header-full = (x: 16pt, y: 8pt)
+#let inset-header-full = (x: 18pt, y: 10pt)
 #let inset-header-onepage = (x: 10pt, y: 6pt)
-#let inset-block-full = 12pt
+#let inset-block-full = 16pt
 #let inset-block-onepage = 4pt
-#let inset-card = 10pt
+#let inset-card = 14pt
 #let inset-small = 8pt
-#let inset-badge = (x: 8pt, y: 4pt)
+#let inset-badge = (x: 9pt, y: 5pt)
 #let inset-badge-small = (x: 4pt, y: 2pt)
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -204,14 +216,15 @@
   [#start-year → #end-text]
 }
 
-// Date badge (full size)
+// Date badge (full size) — mono, since dates/badges are the identity accent
 #let date-badge(content, size: size-date-full) = {
   box(
     fill: color-bg-light,
+    stroke: stroke-thin + color-divider,
     radius: radius-medium,
     inset: inset-badge,
   )[
-    #text(size: size, weight: "medium", fill: color-muted)[#content]
+    #mono-text(size: size, color: color-muted)[#content]
   ]
 }
 
@@ -222,7 +235,7 @@
     radius: radius-small,
     inset: inset-badge-small,
   )[
-    #text(size: size, fill: color-muted)[#content]
+    #mono-text(size: size, color: color-muted)[#content]
   ]
 }
 
@@ -230,6 +243,7 @@
 #let summary-block(content) = {
   block(
     fill: color-bg-light,
+    stroke: stroke-thin + color-divider,
     radius: radius-large,
     inset: inset-block-full,
     width: 100%,
@@ -257,7 +271,7 @@
     height: size,
     radius: 50%,
     clip: true,
-    stroke: 2pt + color-primary,
+    stroke: stroke-normal + color-divider-strong,
   )[
     #image(path, width: size, height: size, fit: "cover")
   ]
