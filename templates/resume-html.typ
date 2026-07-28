@@ -75,7 +75,7 @@
 #let section-title(id, icon-name, label, slug) = {
   html.div(class: "mb-3")[
     #html.p(class: "section-command mb-1", aria-hidden: "true")[
-      #html.span(class: "chevron")[❯] #html.span[~/#slug]
+      #html.span(class: "chevron")[❯] #html.span[#"~/"#slug]
     ]
     #html.h2(id: id, class: tw.section-header)[#nf-icon-html(icon-name) #label]
   ]
@@ -162,7 +162,7 @@
   // no simulated window, no gradient text.
   #html.div(class: "text-center mb-6")[
     #html.p(class: "prompt mb-2", aria-hidden: "true")[
-      #html.span(class: "prompt-user")[joao]#html.span(class: "prompt-accent")[@]#html.span(class: "prompt-user")[backend]#html.span[:~]
+      #html.span(class: "prompt-user")[joao]#html.span(class: "prompt-accent")[#"@"]#html.span(class: "prompt-user")[backend]#html.span[#":~"]
     ]
     #html.h1(class: "text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-2")[
       #data.basics.name #html.span(class: "cursor-blink", aria-hidden: "true")[▌]

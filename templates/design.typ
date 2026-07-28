@@ -53,7 +53,7 @@
 
 // Terminal prompt line, e.g. `joao@backend:~` — a single identity cue, not a window.
 #let prompt-line(user: "joao", host: "backend", path: "~", size: 9pt) = {
-  mono-text(size: size, color: color-subtle)[#user#text(fill: color-primary)[@]#host#text(fill: color-subtle)[:]#path#text(fill: color-primary, weight: "bold")[_]]
+  mono-text(size: size, color: color-subtle)[#user#text(fill: color-primary)[#"@"]#host#text(fill: color-subtle)[:]#path#text(fill: color-primary, weight: "bold")[#"_"]]
 }
 
 // Helper function to render Nerd Font icons
