@@ -171,23 +171,23 @@
   ]
 
   // Photo + Contact + Social (3 equal columns)
-  #html.div(class: tw.bg-card + " p-6")[
-    #html.div(class: "grid grid-cols-1 md:grid-cols-3 gap-6 md:divide-x divide-zinc-200 dark:divide-zinc-700")[
+  #html.div(class: tw.bg-card + " p-8")[
+    #html.div(class: "grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x divide-zinc-200 dark:divide-zinc-700")[
       // Photo (left) — discreet ring, no glow
       #html.div(class: "flex justify-center items-center")[
         #if data.basics.at("image", default: none) != none [
           #html.img(
             src: "../" + data.basics.image,
             alt: data.basics.name,
-            class: "photo-ring w-32 h-32 rounded-full object-cover object-top"
+            class: "photo-ring w-36 h-36 rounded-full object-cover object-top"
           )
         ]
       ]
 
       // Contact info (center)
-      #html.div(class: "md:pl-6")[
-        #html.h3(class: "section-command mb-3")[#t("contact", lang)]
-        #html.address(class: "not-italic space-y-2")[
+      #html.div(class: "md:pl-8")[
+        #html.h3(class: "section-command mb-4")[#t("contact", lang)]
+        #html.address(class: "not-italic space-y-3")[
           #html.a(href: "mailto:" + data.basics.email, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("email") #data.basics.email]
           #html.a(href: "tel:" + clean-phone, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("phone") #data.basics.phone]
           #html.span(class: "flex items-center gap-2 text-sm text-zinc-500")[#nf-icon-html("location") #data.basics.location.city, #data.basics.location.region]
@@ -196,9 +196,9 @@
       ]
 
       // Social links (right)
-      #html.div(class: "md:pl-6")[
-        #html.h3(class: "section-command mb-3")[#t("social", lang)]
-        #html.nav(class: "space-y-2", aria-label: "Social profiles")[
+      #html.div(class: "md:pl-8")[
+        #html.h3(class: "section-command mb-4")[#t("social", lang)]
+        #html.nav(class: "space-y-3", aria-label: "Social profiles")[
           #for profile in data.basics.profiles [
             #html.a(href: profile.url, class: "flex items-center gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " transition-colors", target: "_blank", rel: "noopener")[#nf-icon-html(profile.network) #profile.network]
           ]
@@ -227,7 +227,7 @@
       #html.article(class: "pb-5 mb-5 border-b border-zinc-200 dark:border-zinc-700 last:border-b-0 last:mb-0 last:pb-0")[
         #html.header(class: "flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3")[
           #html.div(class: "flex-1")[
-            #html.h3(class: "text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1")[#job.position]
+            #html.h3(class: "text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-1")[#job.position]
             #html.p(class: "text-base text-zinc-700 dark:text-zinc-300")[
               #html.span(class: "text-zinc-500")[ #t("at", lang) ]
               #html.a(href: job.url, class: "font-medium " + tw.accent-text + " hover:underline", target: "_blank", rel: "noopener")[#job.name]
@@ -236,7 +236,7 @@
               #html.p(class: "text-sm italic " + tw.muted-text + " mt-1")[#job.summary]
             ]
           ]
-          #html.span(class: "badge-mono shrink-0 px-3 py-1.5 rounded-full whitespace-nowrap")[
+          #html.span(class: "badge-mono shrink-0 px-3 py-1.5 rounded-md whitespace-nowrap")[
             #format-date-range-html(job.startDate, job.at("endDate", default: none), lang: lang)
           ]
         ]
@@ -307,7 +307,7 @@
           #html.h3(class: "text-sm font-semibold text-zinc-800 dark:text-zinc-200 mb-2")[#skill.name]
           #html.ul(class: "flex flex-wrap gap-2")[
             #for keyword in skill.keywords [
-              #html.li(class: "badge-mono px-2.5 py-1 rounded-full")[#keyword]
+              #html.li(class: "badge-mono px-2.5 py-1 rounded-md")[#keyword]
             ]
           ]
         ]
