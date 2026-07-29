@@ -170,24 +170,24 @@
     #html.p(class: "text-lg font-medium text-zinc-500 dark:text-zinc-400")[#data.basics.label]
   ]
 
-  // Photo + Contact + Social (3 equal columns)
+  // Photo + Contact + Social (photo sized to content, contact/social share the rest)
   #html.div(class: tw.bg-card + " p-8")[
-    #html.div(class: "grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x divide-zinc-200 dark:divide-zinc-700")[
+    #html.div(class: "grid grid-cols-1 md:grid-cols-[8rem_1fr_1fr] gap-6 md:divide-x divide-zinc-200 dark:divide-zinc-700")[
       // Photo (left) — discreet ring, no glow
       #html.div(class: "flex justify-center items-center")[
         #if data.basics.at("image", default: none) != none [
           #html.img(
             src: "../" + data.basics.image,
             alt: data.basics.name,
-            class: "photo-ring w-36 h-36 rounded-full object-cover object-top"
+            class: "photo-ring w-32 h-32 rounded-full object-cover object-top"
           )
         ]
       ]
 
       // Contact info (center)
-      #html.div(class: "md:pl-8 min-w-0")[
+      #html.div(class: "md:pl-6 min-w-0")[
         #html.h3(class: "section-command mb-4")[#t("contact", lang)]
-        #html.address(class: "not-italic space-y-3")[
+        #html.address(class: "not-italic space-y-2")[
           #html.a(href: "mailto:" + data.basics.email, class: "flex items-start gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#html.span(class: "mt-0.5")[#nf-icon-html("email")] #html.span(class: "break-words min-w-0")[#data.basics.email]]
           #html.a(href: "tel:" + clean-phone, class: "flex items-start gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#html.span(class: "mt-0.5")[#nf-icon-html("phone")] #html.span(class: "break-words min-w-0")[#data.basics.phone]]
           #html.span(class: "flex items-start gap-2 min-w-0 text-sm text-zinc-500")[#html.span(class: "mt-0.5")[#nf-icon-html("location")] #html.span(class: "break-words min-w-0")[#data.basics.location.city, #data.basics.location.region]]
@@ -196,9 +196,9 @@
       ]
 
       // Social links (right)
-      #html.div(class: "md:pl-8 min-w-0")[
+      #html.div(class: "md:pl-6 min-w-0")[
         #html.h3(class: "section-command mb-4")[#t("social", lang)]
-        #html.nav(class: "space-y-3", aria-label: "Social profiles")[
+        #html.nav(class: "space-y-2", aria-label: "Social profiles")[
           #for profile in data.basics.profiles [
             #html.a(href: profile.url, class: "flex items-start gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " transition-colors", target: "_blank", rel: "noopener")[#html.span(class: "mt-0.5")[#nf-icon-html(profile.network)] #profile.network]
           ]
