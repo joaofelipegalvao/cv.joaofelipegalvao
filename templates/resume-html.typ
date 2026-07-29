@@ -24,7 +24,7 @@
   accent-text: "text-indigo-600 dark:text-indigo-400",
   accent-hover: "hover:text-indigo-800 dark:hover:text-indigo-300",
   muted-text: "text-zinc-500 dark:text-zinc-400",
-  bg-card: "bg-zinc-50 dark:bg-zinc-800/60 card-panel rounded-xl",
+  bg-card: "bg-zinc-50 dark:bg-zinc-800/60 card-panel rounded-lg",
   // K8s specific (blue only for Kubernetes - kept as the single themed exception)
   k8s-text: "text-blue-600 dark:text-blue-400",
   k8s-border: "border-blue-500",
@@ -138,7 +138,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 #html.nav(id: "toc", class: "fixed right-12 top-1/2 -translate-y-1/2 hidden xl:block w-56 print:hidden", aria-label: "Table of contents")[
-  #html.div(class: "bg-white/70 dark:bg-zinc-800/70 backdrop-blur-sm rounded-xl shadow-sm border border-zinc-200/70 dark:border-zinc-700/70 p-4")[
+  #html.div(class: "bg-white/70 dark:bg-zinc-800/70 backdrop-blur-sm rounded-lg shadow-sm border border-zinc-200/70 dark:border-zinc-700/70 p-4")[
     #html.p(class: "section-command mb-3")[#if lang == "en" { "Navigation" } else { "Navegação" }]
     #html.ul(class: "space-y-2 text-sm")[
       #html.li[#html.a(href: "#summary-title", class: "flex items-center gap-2 text-zinc-600 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors")[#nf-icon-html("summary") #t("summary", lang)]]
@@ -275,7 +275,7 @@
       let k8s-certs = filter-k8s-certs(data.certificates)
 
       if k8s-certs.len() > 0 [
-        #html.div(class: "flex items-center gap-4 " + tw.k8s-bg + " border " + tw.k8s-border + " p-4 rounded-xl mb-5")[
+        #html.div(class: "flex items-center gap-4 " + tw.k8s-bg + " border " + tw.k8s-border + " p-4 rounded-lg mb-5")[
           #html.span(class: "text-4xl nf " + tw.k8s-text)[󱃾]
           #html.div[
             #html.h3(class: "text-base font-bold " + tw.k8s-text + " uppercase tracking-wider mb-1")[#t("k8s-title", lang)]
@@ -288,7 +288,7 @@
     #html.div(class: "grid grid-cols-1 md:grid-cols-2 gap-3")[
       #{
         for cert in filter-other-certs(data.certificates) [
-          #html.article(class: "card-panel rounded-xl p-3")[
+          #html.article(class: "card-panel rounded-md p-3")[
             #html.h3(class: "text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-1")[#cert.name]
             #html.p(class: "text-xs " + tw.muted-text)[#cert.issuer #html.span(class: "mx-2")[•] #html.span(class: "font-mono-ui")[#cert.date]]
           ]
@@ -307,7 +307,7 @@
           #html.h3(class: "text-sm font-semibold text-zinc-800 dark:text-zinc-200 mb-2")[#skill.name]
           #html.ul(class: "flex flex-wrap gap-2")[
             #for keyword in skill.keywords [
-              #html.li(class: "badge-mono px-2.5 py-1 rounded-md")[#keyword]
+              #html.li(class: "badge-mono px-2.5 py-1 rounded")[#keyword]
             ]
           ]
         ]
@@ -336,7 +336,7 @@
 
       #html.div(class: "grid grid-cols-1 md:grid-cols-2 gap-4")[
         #for project in data.projects [
-          #html.article(class: "card-panel rounded-xl p-4")[
+          #html.article(class: "card-panel rounded-lg p-4")[
             #html.h3(class: "text-base font-semibold mb-2")[
               #html.a(href: project.url, class: tw.accent-text + " hover:underline", target: "_blank", rel: "noopener")[#project.name]
             ]
