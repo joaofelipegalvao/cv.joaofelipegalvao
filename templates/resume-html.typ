@@ -188,10 +188,10 @@
       #html.div(class: "md:pl-6 min-w-0")[
         #html.h3(class: "section-command mb-4")[#t("contact", lang)]
         #html.address(class: "not-italic space-y-2")[
-          #html.a(href: "mailto:" + data.basics.email, class: "flex items-start gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#html.span(class: "mt-0.5")[#nf-icon-html("email")] #html.span(class: "break-words min-w-0")[#data.basics.email]]
-          #html.a(href: "tel:" + clean-phone, class: "flex items-start gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#html.span(class: "mt-0.5")[#nf-icon-html("phone")] #html.span(class: "break-words min-w-0")[#data.basics.phone]]
-          #html.span(class: "flex items-start gap-2 min-w-0 text-sm text-zinc-500")[#html.span(class: "mt-0.5")[#nf-icon-html("location")] #html.span(class: "break-words min-w-0")[#data.basics.location.city, #data.basics.location.region]]
-          #html.a(href: data.basics.url, class: "flex items-start gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline", target: "_blank")[#html.span(class: "mt-0.5")[#nf-icon-html("website")] Website]
+          #html.a(href: "mailto:" + data.basics.email, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("email") #html.span(class: "break-words min-w-0")[#data.basics.email]]
+          #html.a(href: "tel:" + clean-phone, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("phone") #html.span(class: "break-words min-w-0")[#data.basics.phone]]
+          #html.span(class: "flex items-center gap-2 min-w-0 text-sm text-zinc-500")[#nf-icon-html("location") #html.span(class: "break-words min-w-0")[#data.basics.location.city, #data.basics.location.region]]
+          #html.a(href: data.basics.url, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline", target: "_blank")[#nf-icon-html("website") Website]
         ]
       ]
 
@@ -200,7 +200,7 @@
         #html.h3(class: "section-command mb-4")[#t("social", lang)]
         #html.nav(class: "space-y-2", aria-label: "Social profiles")[
           #for profile in data.basics.profiles [
-            #html.a(href: profile.url, class: "flex items-start gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " transition-colors", target: "_blank", rel: "noopener")[#html.span(class: "mt-0.5")[#nf-icon-html(profile.network)] #profile.network]
+            #html.a(href: profile.url, class: "flex items-center gap-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " transition-colors", target: "_blank", rel: "noopener")[#nf-icon-html(profile.network) #profile.network]
           ]
         ]
       ]
