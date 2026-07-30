@@ -34,7 +34,7 @@
 )
 
 // Nerd Font icons for HTML (same as design.typ)
-#let nf-icon-html(name) = {
+#let nf-icon-html(name, color-class: none) = {
   let icons = (
     // Social (nf-fa brand icons)
     "github": "\u{f09b}",      // nf-fa-github
@@ -62,7 +62,8 @@
     "download": "󰇚",           // nf-md-download
   )
   let icon-char = icons.at(lower(name), default: "")
-  html.elem("span", attrs: (class: "nf mr-1"))[#icon-char]
+  let icon-class = "nf mr-1" + if color-class != none { " " + color-class } else { "" }
+  html.elem("span", attrs: (class: icon-class))[#icon-char]
 }
 
 #let format-date-range-html(start, end, lang: "en") = {
@@ -77,7 +78,7 @@
     #html.p(class: "section-command mb-1", aria-hidden: true)[
       #html.span(class: "chevron")[❯] #html.span[#"~/"#slug]
     ]
-    #html.h2(id: id, class: tw.section-header)[#nf-icon-html(icon-name) #label]
+    #html.h2(id: id, class: tw.section-header)[#nf-icon-html(icon-name, color-class: "text-indigo-600 dark:text-indigo-400") #label]
   ]
 }
 
