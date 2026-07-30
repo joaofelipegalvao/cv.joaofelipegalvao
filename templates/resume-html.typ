@@ -226,7 +226,7 @@
 
     #for job in data.work [
       #html.article(class: "pb-5 mb-5 border-b border-zinc-200 dark:border-zinc-700 last:border-b-0 last:mb-0 last:pb-0")[
-        #html.header(class: "flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3")[
+        #html.header(class: "flex flex-col items-start sm:flex-row sm:justify-between gap-2 mb-3")[
           #html.div(class: "flex-1")[
             #html.h3(class: "text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-1")[#job.position]
             #html.p(class: "text-base text-zinc-700 dark:text-zinc-300")[
