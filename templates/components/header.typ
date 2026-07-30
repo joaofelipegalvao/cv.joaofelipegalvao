@@ -33,7 +33,7 @@
       #grid(
         columns: (1fr, 1fr, 1fr),
         gutter: 0pt,
-        align: (center + horizon, left + horizon, left + horizon),
+        align: (center + horizon, left + top, left + top),
         // Photo (left) with vibrante border
         [
           #if data.basics.at("image", default: none) != none {
