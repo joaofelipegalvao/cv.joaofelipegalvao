@@ -45,10 +45,6 @@ work:
     url: "#"
     startDate: 2019-05
     endDate: 2022-12
-  - name: Trinus
-    url: "#"
-    startDate: 2023-01
-    endDate: 2024-12
 
 education:
   - institution: Estácio

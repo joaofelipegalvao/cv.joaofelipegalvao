@@ -24,16 +24,6 @@ work:
       - Invoice issuance
     location: Brazil
 
-  - position: Technical Support & Web Operations
-    summary: Customer Service Department
-    highlights:
-      - Bug fixing and maintenance in production e-commerce environment
-      - Integration and configuration of payment APIs for online stores
-      - Analysis and resolution of technical issues reducing operational rework
-      - Technical support for web systems serving 30+ merchant clients
-      - Technical documentation of processes and system integrations
-    location: Brazil
-
 projects:
   - name: omarchy-tmux
     description: Native integration between Omarchy Linux and tmux-powerkit with support for 40+ themes, persistent per-theme profiles, and automatic reload on theme change.

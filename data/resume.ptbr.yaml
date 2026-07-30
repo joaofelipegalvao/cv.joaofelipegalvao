@@ -23,16 +23,6 @@ work:
       - Treinei novos colaboradores nos processos internos e na utilização das ferramentas da empresa, contribuindo para uma integração mais eficiente e redução da curva de aprendizado
     location: Brasil
 
-  - position: Suporte Técnico & Operações Web
-    summary: Departamento de Atendimento ao Cliente
-    highlights:
-      - Manutenção e correção de bugs em ambiente de produção de e-commerce
-      - Integração e configuração de APIs de pagamento para lojas virtuais
-      - Análise e resolução de problemas técnicos reduzindo retrabalho operacional
-      - Suporte técnico a sistemas web para +30 clientes lojistas
-      - Documentação técnica de processos e integrações de sistemas
-    location: Brasil
-
 projects:
   - name: omarchy-tmux
     description: Integração nativa entre Omarchy Linux e tmux-powerkit com suporte a 40+ temas, perfis persistentes por tema e troca automática ao mudar o tema do sistema.
