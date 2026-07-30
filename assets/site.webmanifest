@@ -1,11 +1,11 @@
 {
-  "name": "Fábio Luciano - Platform Engineer",
-  "short_name": "Fábio Luciano",
-  "description": "Platform Engineer | CNCF Kubestronaut | DevEx Specialist",
+  "name": "João Felipe Galvão - Desenvolvedor Back-end",
+  "short_name": "João Felipe Galvão",
+  "description": "Desenvolvedor Back-end | Java & Rust | APIs e Sistemas",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#1e293b",
-  "theme_color": "#f59e0b",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
   "icons": [
     {
       "src": "favicon-16x16.png",
