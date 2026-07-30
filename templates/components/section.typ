@@ -16,9 +16,9 @@
     stroke-width,
     gutter
   ) = if variant == "full" {
-    (spacing-section-full, size-section-full, size-section-icon-full, tracking-normal, stroke-thick, inset-small)
+    (spacing-section-full, size-section-full, size-section-icon-full, tracking-normal, stroke-normal, inset-small)
   } else {
-    (spacing-section-onepage, size-section-onepage, size-section-icon-onepage, tracking-tight, stroke-medium, gutter-tiny)
+    (spacing-section-onepage, size-section-onepage, size-section-icon-onepage, tracking-tight, stroke-thin, gutter-tiny)
   }
 
   let block-below = if variant == "full" { gutter-medium } else { spacing-section-below-onepage }
