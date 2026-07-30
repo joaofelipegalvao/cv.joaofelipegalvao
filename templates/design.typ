@@ -48,7 +48,14 @@
 
 // Helper to render mono "chrome" text (prompts, tiny labels, date badges)
 #let mono-text(content, size: 8.5pt, color: none, weight: "regular") = {
-  text(font: font-mono, size: size, fill: if color != none { color } else { color-muted }, weight: weight)[#content]
+  text(
+    font: font-mono,
+    size: size,
+    fill: if color != none { color } else { color-muted },
+    weight: weight,
+    top-edge: "cap-height",
+    bottom-edge: "baseline",
+  )[#content]
 }
 
 // Terminal prompt line, e.g. `joao@backend:~` — a single identity cue, not a window.
