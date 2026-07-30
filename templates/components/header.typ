@@ -46,13 +46,13 @@
             #text(size: size-small-full, weight: "bold", fill: color-primary)[#t("contact", lang)]
             #v(0.6em)
             #text(size: size-date-full, fill: color-muted)[
-              #link("mailto:" + data.basics.email)[#nf-icon(icon-email, size: size-date-full, color: color-muted, dy: 0.1em) #data.basics.email]
+              #link("mailto:" + data.basics.email)[#nf-icon(icon-email, size: size-date-full, color: color-muted) #data.basics.email]
               #linebreak()
-              #link("tel:" + clean-phone)[#nf-icon(icon-phone, size: size-date-full, color: color-muted, dy: 0.1em) #data.basics.phone]
+              #link("tel:" + clean-phone)[#nf-icon(icon-phone, size: size-date-full, color: color-muted) #data.basics.phone]
               #linebreak()
-              #nf-icon(icon-location, size: size-date-full, color: color-muted, dy: 0.1em) #data.basics.location.city, #data.basics.location.region
+              #nf-icon(icon-location, size: size-date-full, color: color-muted) #data.basics.location.city, #data.basics.location.region
               #linebreak()
-              #link(data.basics.url)[#nf-icon(icon-website, size: size-date-full, color: color-muted, dy: 0.1em) Website]
+              #link(data.basics.url)[#nf-icon(icon-website, size: size-date-full, color: color-muted) Website]
             ]
           ]
         ],
@@ -63,7 +63,7 @@
             #v(0.3em)
             #text(size: size-date-full)[
               #for profile in data.basics.profiles [
-                #nf-icon(get-social-icon(profile.network), size: size-date-full, color: color-primary, dy: 0.1em) #link(profile.url)[#text(fill: color-primary)[#profile.network]]
+                #nf-icon(get-social-icon(profile.network), size: size-date-full, color: color-primary) #link(profile.url)[#text(fill: color-primary)[#profile.network]]
                 #linebreak()
               ]
             ]
