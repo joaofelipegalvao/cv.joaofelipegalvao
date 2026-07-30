@@ -57,9 +57,12 @@
 }
 
 // Helper function to render Nerd Font icons
-#let nf-icon(icon, size: 1em, color: none) = {
+// dy: optional vertical nudge (e.g. 0.5pt) to fix baseline mismatch between
+// the icon font's glyph metrics and the surrounding body text - purely
+// visual, does not affect the space the icon reserves in the line.
+#let nf-icon(icon, size: 1em, color: none, dy: 0pt) = {
   let icon-color = if color != none { color } else { color-primary }
-  text(font: font-icons, size: size, fill: icon-color)[#icon]
+  move(dy: dy)[#text(font: font-icons, size: size, fill: icon-color)[#icon]]
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
