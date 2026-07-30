@@ -172,7 +172,7 @@
 
   // Photo + Contact + Social (photo sized to content, contact/social share the rest)
   #html.div(class: tw.bg-card + " p-8")[
-    #html.div(class: "grid grid-cols-1 md:grid-cols-[8rem_1fr_1fr] gap-6 md:divide-x divide-zinc-200 dark:divide-zinc-700")[
+    #html.div(class: "grid grid-cols-1 md:grid-cols-3 gap-6 md:divide-x divide-zinc-200 dark:divide-zinc-700")[
       // Photo (left) — discreet ring, no glow
       #html.div(class: "flex justify-center items-center")[
         #if data.basics.at("image", default: none) != none [
@@ -185,18 +185,18 @@
       ]
 
       // Contact info (center)
-      #html.div(class: "md:pl-6 min-w-0")[
+      #html.div(class: "md:pl-6")[
         #html.h3(class: "section-command mb-4")[#t("contact", lang)]
         #html.address(class: "not-italic space-y-2")[
-          #html.a(href: "mailto:" + data.basics.email, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("email") #html.span(class: "break-words min-w-0")[#data.basics.email]]
-          #html.a(href: "tel:" + clean-phone, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("phone") #html.span(class: "break-words min-w-0")[#data.basics.phone]]
-          #html.span(class: "flex items-center gap-2 min-w-0 text-sm text-zinc-500")[#nf-icon-html("location") #html.span(class: "break-words min-w-0")[#data.basics.location.city, #data.basics.location.region]]
-          #html.a(href: data.basics.url, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline", target: "_blank")[#nf-icon-html("website") Website]
+          #html.a(href: "mailto:" + data.basics.email, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("email") #data.basics.email]
+          #html.a(href: "tel:" + clean-phone, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("phone") #data.basics.phone]
+          #html.span(class: "flex items-center gap-2 text-sm text-zinc-500")[#nf-icon-html("location") #data.basics.location.city, #data.basics.location.region]
+          #html.a(href: data.basics.url, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline", target: "_blank")[#nf-icon-html("website") Website]
         ]
       ]
 
       // Social links (right)
-      #html.div(class: "md:pl-6 min-w-0")[
+      #html.div(class: "md:pl-6")[
         #html.h3(class: "section-command mb-4")[#t("social", lang)]
         #html.nav(class: "space-y-2", aria-label: "Social profiles")[
           #for profile in data.basics.profiles [
