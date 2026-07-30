@@ -165,7 +165,7 @@
     #html.p(class: "prompt mb-2", aria-hidden: true)[
       #html.span(class: "prompt-user")[joao]#html.span(class: "prompt-accent")[#"@"]#html.span(class: "prompt-user")[backend]#html.span[#":~"]
     ]
-    #html.h1(class: "text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-2")[
+    #html.h1(class: "text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-2")[
       #data.basics.name #html.span(class: "cursor-blink", aria-hidden: true)[▌]
     ]
     #html.p(class: "text-lg font-medium text-zinc-500 dark:text-zinc-400")[#data.basics.label]
