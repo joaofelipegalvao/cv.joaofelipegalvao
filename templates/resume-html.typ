@@ -185,18 +185,18 @@
       ]
 
       // Contact info (center)
-      #html.div(class: "md:pl-6")[
+      #html.div(class: "md:pl-6 min-w-0")[
         #html.h3(class: "section-command mb-4")[#t("contact", lang)]
         #html.address(class: "not-italic space-y-2")[
-          #html.a(href: "mailto:" + data.basics.email, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("email") #data.basics.email]
-          #html.a(href: "tel:" + clean-phone, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("phone") #data.basics.phone]
-          #html.span(class: "flex items-center gap-2 text-sm text-zinc-500")[#nf-icon-html("location") #data.basics.location.city, #data.basics.location.region]
-          #html.a(href: data.basics.url, class: "flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline", target: "_blank")[#nf-icon-html("website") Website]
+          #html.a(href: "mailto:" + data.basics.email, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("email") #html.span(class: "truncate")[#data.basics.email]]
+          #html.a(href: "tel:" + clean-phone, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline")[#nf-icon-html("phone") #html.span(class: "truncate")[#data.basics.phone]]
+          #html.span(class: "flex items-center gap-2 min-w-0 text-sm text-zinc-500")[#nf-icon-html("location") #html.span(class: "truncate")[#data.basics.location.city, #data.basics.location.region]]
+          #html.a(href: data.basics.url, class: "flex items-center gap-2 min-w-0 text-sm text-zinc-700 dark:text-zinc-300 " + tw.accent-hover + " hover:underline", target: "_blank")[#nf-icon-html("website") Website]
         ]
       ]
 
       // Social links (right)
-      #html.div(class: "md:pl-6")[
+      #html.div(class: "md:pl-6 min-w-0")[
         #html.h3(class: "section-command mb-4")[#t("social", lang)]
         #html.nav(class: "space-y-2", aria-label: "Social profiles")[
           #for profile in data.basics.profiles [
