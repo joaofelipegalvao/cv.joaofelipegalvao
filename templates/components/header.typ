@@ -31,7 +31,7 @@
       inset: inset-header-full,
     )[
       #grid(
-        columns: (1fr, 1fr, 1fr),
+        columns: (100pt, 1fr, 1fr),
         gutter: 0pt,
         align: (center + horizon, left + top, left + top),
         // Photo (left) with vibrante border
