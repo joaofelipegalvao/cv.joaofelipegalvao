@@ -30,7 +30,7 @@
   k8s-border: "border-blue-500",
   k8s-bg: "bg-blue-50 dark:bg-blue-900/20",
   // Section header - quiet, one hairline, no gradient border
-  section-header: "flex items-center gap-3 text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 pb-2.5 border-b border-zinc-200 dark:border-zinc-700",
+  section-header: "flex items-center gap-3 text-lg font-semibold tracking-tight text-indigo-600 dark:text-indigo-400 pb-2.5 border-b border-zinc-200 dark:border-zinc-700",
 )
 
 // Nerd Font icons for HTML (same as design.typ)
