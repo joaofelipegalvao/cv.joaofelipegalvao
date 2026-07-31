@@ -2,7 +2,7 @@
 basics:
   label: Desenvolvedor Back-end | Java & Rust | APIs e Sistemas
   summary: >
-    Estudante de Análise e Desenvolvimento de Sistemas (4º semestre - Estácio)
+    Estudante de Análise e Desenvolvimento de Sistemas (3º semestre - Estácio)
     com foco em desenvolvimento backend, automação e arquitetura de software.
     Autor de projetos open-source incluindo CLI tools em Rust, integrações de
     APIs REST e sistemas com persistência de dados.
@@ -83,7 +83,7 @@ projects:
 
 education:
   - area: Análise e Desenvolvimento de Sistemas
-    studyType: Graduação (4º Semestre)
+    studyType: Graduação (3º Semestre)
 
 skills:
   - name: Linguagens de Programação

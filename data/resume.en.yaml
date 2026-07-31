@@ -2,7 +2,7 @@
 basics:
   label: Back-end Developer | Java & Rust | APIs & Systems
   summary: >
-    Systems Analysis and Development student (4th semester - Estácio)
+    Systems Analysis and Development student (3rd semester - Estácio)
     focused on backend development, automation, and software architecture.
     Author of open-source projects including Rust CLI tools, REST API integrations,
     and systems with data persistence.
@@ -83,7 +83,7 @@ projects:
 
 education:
   - area: Systems Analysis and Development
-    studyType: Undergraduate (4th Semester)
+    studyType: Undergraduate (3rd Semester)
 
 skills:
   - name: Programming Languages
